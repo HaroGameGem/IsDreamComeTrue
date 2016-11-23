@@ -73,7 +73,6 @@ public class TrialManager : MonoBehaviour {
 	void TrialsSetting()
 	{
 		for (int i = 0; i < isActiveTrial.Length; i++) {
-			Debug.Log("isActiveTrial Length : " + isActiveTrial.Length);
 			if(trialsGroup[i] != null)
 			{
 				trialsGroup[i].SetActive(false);

@@ -11,32 +11,32 @@ public class FadeCtrl : MonoBehaviour {
 		
 	}
 	
-	public void OnFadeInOut(float inOutTime, float waitTime)
+	public void FadeInOut(float inOutTime, float waitTime)
 	{
-		StartCoroutine(FadeInOut(inOutTime, waitTime));
+		StartCoroutine(CoFadeInOut(inOutTime, waitTime));
 	}
 	
-	IEnumerator FadeInOut(float inOutTime, float waitTime)
+	IEnumerator CoFadeInOut(float inOutTime, float waitTime)
 	{
 		Debug.Log("start fadeInOut");
-		yield return StartCoroutine(Fade(0f, inOutTime * 0.5f));
+		yield return StartCoroutine(CoFade(0f, inOutTime * 0.5f));
 		yield return new WaitForSeconds(waitTime);
-		yield return StartCoroutine(Fade(1f, inOutTime * 0.5f));
+		yield return StartCoroutine(CoFade(1f, inOutTime * 0.5f));
 		Debug.Log("end fadeInOut");
-		StartCoroutine(FadeInOut(inOutTime, waitTime));
+		StartCoroutine(CoFadeInOut(inOutTime, waitTime));
 	}
 	
-	public void OnFade(float alphaAmt, float time)
+	public void Fade(float alphaAmt, float time)
 	{
 		if(time == 0f)
 		{
 			color._Alpha = alphaAmt;
 			return;
 		}
-		StartCoroutine(Fade(alphaAmt, time));
+		StartCoroutine(CoFade(alphaAmt, time));
 	}
 	
-	IEnumerator Fade(float alphaAmt, float time)
+	IEnumerator CoFade(float alphaAmt, float time)
 	{
 		bool isFadeOut = color._Alpha < alphaAmt ? true : false;
 		if(isFadeOut == true)

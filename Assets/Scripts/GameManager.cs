@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour {
 			Debug.Log("GameManager가 둘이상입니다.");
 		}
 		
-		fadeBlack.OnFade(1f, 0f);
+		fadeBlack.Fade(1f, 0f);
 		
 		//Events
 		EventGameStart += GameStart;
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour {
 		addTrialLightRange = addTrialLightRange / trialCnt;
 		addTrialLightIntensity = addTrialLightRange / trialCnt;
 		
-		fadeBlack.OnFade(0f, 4f);
+		fadeBlack.Fade(0f, 4f);
 		player.transform.position = GoalManager.Instance.goalPoint[0].transform.position;
 		yield return new WaitForSeconds(3f);
 	}
@@ -101,11 +101,11 @@ public class GameManager : MonoBehaviour {
 		Debug.Log("Game Over User Win : " + isWin);
 		
 		if(isWin)		
-			fadeGood.OnFade(0.5f, 0.5f);
+			fadeGood.Fade(0.5f, 0.5f);
 		else
-			fadeDanger.OnFade(0.5f, 0.5f);
+			fadeDanger.Fade(0.5f, 0.5f);
 		yield return new WaitForSeconds(0.5f);
-		fadeBlack.OnFade(1f, 1f);		
+		fadeBlack.Fade(1f, 1f);		
 		yield return new WaitForSeconds(2f);
 		Application.LoadLevel(0);
 	}
