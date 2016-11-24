@@ -113,9 +113,14 @@ public class GameManager : MonoBehaviour {
 	
 	public void OnCamRotation()
 	{
-		int n = 0;
-		do{ n = Random.Range(1,4); }
-		while(DataManager.Instance.CamRot != (eCamRotation)n);
+		int n = Random.Range(1,4);
+		if(DataManager.Instance.CamRot == (eCamRotation)n)
+        {
+            if (n == 1)
+                n++;
+            if (n == 4)
+                n--;
+        }
 		
 		float camRot = 0f;
 		DataManager.Instance.CamRot = (eCamRotation)n;
@@ -142,7 +147,7 @@ public class GameManager : MonoBehaviour {
 		}
 		
 		for (int i = 0; i < cameras.Length; i++) {
-			cameras[i].transform.DORotate(new Vector3(0f,0f,camRot), 0.5f);				
+			cameras[i].transform.DORotate(new Vector3(0f,0f,camRot), 0.2f);				
 		}
 	}
 	

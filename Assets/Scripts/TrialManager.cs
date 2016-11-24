@@ -58,8 +58,8 @@ public class TrialManager : MonoBehaviour {
 			}
 		}
 		*/
-		int eTrialCnt = trials[dataManager.IdxGoalPoint-1].trials.Length;
-		for (int j = 0; j < eTrialCnt; j++) {
+		int eTrialLength = trials[dataManager.IdxGoalPoint-1].trials.Length;
+		for (int j = 0; j < eTrialLength; j++) {
 			isActiveTrial[(int)trials[dataManager.IdxGoalPoint-1].trials[j] - 1] = true;			
 		}
 		
@@ -90,7 +90,7 @@ public class TrialManager : MonoBehaviour {
 			trialsGroup[idx].SetActive(true);
 		}
 		
-		idx = (int)eTrials.flyingDangerObject-1;
+		idx = (int)eTrials.WayPointDangerObject-1;
 		if(isActiveTrial[idx])
 		{
 			Debug.Log("SetActive1");
@@ -104,13 +104,13 @@ public class TrialManager : MonoBehaviour {
 		}
 		
 		idx = (int)eTrials.canLookAt360-1;
-		if(true)
+		if(isActiveTrial[idx])
 		{
 			GameManager.Instance.sightCtrl.isCanLookAt360 = isActiveTrial[idx];
 		}
 		
 		idx = (int)eTrials.cantSeeAnything-1;
-		if(true)
+		if(isActiveTrial[idx])
 		{
 			GameManager.Instance.sightCtrl.isCantSeeAnything = isActiveTrial[idx];			
 		}

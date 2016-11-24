@@ -285,7 +285,6 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_ShurikenThreadFix.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Spawn System\CFX_SpawnSystem.cs" />
-    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\DangerObjectCtrl.cs" />
     <Compile Include="Assets\Scripts\DangerRader.cs" />
     <Compile Include="Assets\Scripts\DataManager.cs" />
@@ -301,6 +300,7 @@
     <Compile Include="Assets\Scripts\TrialRader.cs" />
     <Compile Include="Assets\Scripts\TrialSelector.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\WayPointDangerObjectCtrl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\2DDL\Bugs\READ FIRST.txt" />
