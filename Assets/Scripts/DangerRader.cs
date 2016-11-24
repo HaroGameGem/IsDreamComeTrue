@@ -59,7 +59,6 @@ public class DangerRader : MonoBehaviour {
 				Vector3 dangerObjPos = dangerObjectList[i].gameObject.transform.position;
 				float newDistance = Vector3.Distance(dangerObjPos, transform.position);
 				distance = distance > newDistance ? newDistance : distance;
-				Debug.Log("distance" + i + " : " + distance);
 			}
 			else
 			{
