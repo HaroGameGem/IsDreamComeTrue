@@ -41,7 +41,6 @@ public class FadeCtrl : MonoBehaviour {
 		bool isFadeOut = color._Alpha < alphaAmt ? true : false;
 		if(isFadeOut == true)
 		{
-			Debug.Log("Start fadeOut");
 			while(color._Alpha < 0.95f)
 			{
 				yield return null;
@@ -52,7 +51,6 @@ public class FadeCtrl : MonoBehaviour {
 		}
 		else
 		{
-			Debug.Log("Start fadeIn");
 			while(color._Alpha > 0.05f)
 			{
 				yield return null;

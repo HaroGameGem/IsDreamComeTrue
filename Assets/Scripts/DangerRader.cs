@@ -47,7 +47,6 @@ public class DangerRader : MonoBehaviour {
 		for (int i = 0; i < dangerObjectList.Count; i++) {
 			if(!dangerObjectList[i].gameObject.active)
 			{
-				Debug.Log("wow");
 				dangerObjectList.Remove(dangerObjectList[i]);
 				i = 0;
 				if(dangerObjectList.Count == 0)
