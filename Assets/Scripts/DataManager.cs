@@ -5,13 +5,13 @@ public enum eTrials
 {
 	NEVER_DONT_USE_None = 0,
 	dangerObject,
-	flyingDangerObject,
+	WayPointDangerObject,
 	rotateCamera,
 	canLookAt360,
 	cantSeeAnything,
 	DEACTIVE_confuseControl,
 	DEACTIVE_timeOut,
-	NEVER_DONT_USE_End
+	NEVER_DONT_USE_End = 8
 }
 
 public enum eCamRotation
